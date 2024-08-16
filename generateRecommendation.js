@@ -25,10 +25,10 @@ function getRandomImage() {
 
 async function generateRecommendation(diagnostic) {
     const prompt = `Based on the following data: ${JSON.stringify(diagnostic.responses)}, generate a detailed nutrition program.
-                    The response should be a JSON object with the following fields: {imageUrl, Title, Description, HowToAchieveTheGoals, timeNeededToAchieveGoals}.
+                    The response should be a JSON object with the following fields: {imageUrl, Title, Description should be detailed and be a string formatted, HowToAchieveTheGoals, timeNeededToAchieveGoals}.
                     Ensure the nutrition program is detailed and specific to the goals mentioned. The "HowToAchieveTheGoals" field should be a string formatted as:
-                    "1. [Goal Name]:\\n- [Action 1]\\n- [Action 2]\\n...\\n- [Action N]"
-                    The "timeNeededToAchieveGoals" field should be a string.`;
+                    "1. [Goal Name]:\\n- [Action 1]\\n- [Action 2]\\n...\\n- [Action N] , actions should be detailed"
+                    The "timeNeededToAchieveGoals" field should be a string and more detailed.`;
 
     try {
         console.log('Sending request to Google Gemini API with prompt:', prompt);
